@@ -1,0 +1,965 @@
+[
+  {
+    "id": "water-01",
+    "source": "GPU Gems, Chapter 1",
+    "topics": [
+      "Gerstner",
+      "解析法线"
+    ],
+    "summary": "Gerstner / 正弦波叠加、解析切线与法线、几何波和动态法线贴图的分工。波浪实现的经典基础。",
+    "priority": true,
+    "item": {
+      "itemType": "bookSection",
+      "title": "Effective Water Simulation from Physical Models",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Mark",
+          "lastName": "Finch"
+        }
+      ],
+      "url": "https://developer.nvidia.com/gpugems/gpugems/part-i-natural-effects/chapter-1-effective-water-simulation-physical-models",
+      "abstractNote": "Gerstner / 正弦波叠加、解析切线与法线、几何波和动态法线贴图的分工。波浪实现的经典基础。",
+      "language": "en",
+      "tags": [
+        {
+          "tag": "水体渲染"
+        },
+        {
+          "tag": "Gerstner"
+        },
+        {
+          "tag": "解析法线"
+        },
+        {
+          "tag": "GPU Gems, Chapter 1"
+        },
+        {
+          "tag": "优先阅读"
+        }
+      ],
+      "notes": [
+        {
+          "note": "<p><b>阅读要点：</b>Gerstner / 正弦波叠加、解析切线与法线、几何波和动态法线贴图的分工。波浪实现的经典基础。</p><p><b>核验来源：</b><a href=\"https://developer.nvidia.com/gpugems/gpugems/part-i-natural-effects/chapter-1-effective-water-simulation-physical-models\">GPU Gems, Chapter 1</a>；核验日期：2026-10-14。</p>"
+        }
+      ],
+      "attachments": [],
+      "date": "2004",
+      "bookTitle": "GPU Gems, Chapter 1",
+      "publisher": "Addison-Wesley",
+      "id": "water-01"
+    },
+    "pdfs": [],
+    "zoteroKey": "KCLR68W4",
+    "zoteroAttachments": [
+      {
+        "key": "X7G9I88A",
+        "title": "Website snapshot - gpu-gems (2026-10-14)",
+        "contentType": "text/html",
+        "linkMode": "imported_url",
+        "url": "https://developer.nvidia.com/gpugems/gpugems/part-i-natural-effects/chapter-1-effective-water-simulation-physical-models",
+        "path": "E:\\Zotero\\storage\\storage\\X7G9I88A\\chapter-1-effective-water-simulation-physical-models.html",
+        "bytes": 1776053,
+        "md5": "436ac23a4101a246f096d049cd8b296c",
+        "verified": true,
+        "images": 53,
+        "fileType": "网页快照"
+      }
+    ],
+    "attachmentStatus": "verified",
+    "attachmentVerifiedDate": "2026-10-14"
+  },
+  {
+    "id": "water-04",
+    "source": "ACM SIGGRAPH Course Notes",
+    "topics": [
+      "FFT",
+      "频谱海洋"
+    ],
+    "summary": "FFT 海洋的经典讲义：统计波谱、频域时间演化、位移、法线和尖锐波。",
+    "priority": true,
+    "item": {
+      "itemType": "report",
+      "title": "Simulating Ocean Water",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Jerry",
+          "lastName": "Tessendorf"
+        }
+      ],
+      "url": "https://people.computing.clemson.edu/~jtessen/reports/papers_files/coursenotes2004.pdf",
+      "abstractNote": "FFT 海洋的经典讲义：统计波谱、频域时间演化、位移、法线和尖锐波。",
+      "language": "en",
+      "tags": [
+        {
+          "tag": "水体渲染"
+        },
+        {
+          "tag": "FFT"
+        },
+        {
+          "tag": "频谱海洋"
+        },
+        {
+          "tag": "ACM SIGGRAPH Course Notes"
+        },
+        {
+          "tag": "优先阅读"
+        }
+      ],
+      "notes": [
+        {
+          "note": "<p><b>阅读要点：</b>FFT 海洋的经典讲义：统计波谱、频域时间演化、位移、法线和尖锐波。</p><p><b>核验来源：</b><a href=\"https://people.computing.clemson.edu/~jtessen/reports/papers_files/coursenotes2004.pdf\">ACM SIGGRAPH Course Notes</a>；核验日期：2026-10-14。</p><p>通常引用为 SIGGRAPH 2001；本次取得的是作者 1999-2004 修订版，26 页。</p><p><a href=\"https://people.computing.clemson.edu/~jtessen/reports/papers_files/coursenotes2004.pdf\">Simulating Ocean Water - author 2004 revision</a></p>"
+        }
+      ],
+      "attachments": [],
+      "date": "2001",
+      "institution": "ACM SIGGRAPH Course Notes",
+      "reportType": "Course notes",
+      "extra": "通常引用为 SIGGRAPH 2001；本次取得的是作者 1999-2004 修订版，26 页。",
+      "id": "water-04"
+    },
+    "pdfs": [
+      [
+        "tessendorf.pdf",
+        "Simulating Ocean Water - author 2004 revision",
+        "https://people.computing.clemson.edu/~jtessen/reports/papers_files/coursenotes2004.pdf"
+      ]
+    ],
+    "zoteroKey": "J8AFJJTJ",
+    "zoteroAttachments": [
+      {
+        "key": "N8TQFAZQ",
+        "title": "Simulating Ocean Water - author 2004 revision",
+        "contentType": "application/pdf",
+        "linkMode": "imported_url",
+        "url": "https://people.computing.clemson.edu/~jtessen/reports/papers_files/coursenotes2004.pdf",
+        "path": "E:\\Zotero\\storage\\storage\\N8TQFAZQ\\Tessendorf - 2001 - Simulating Ocean Water.pdf",
+        "bytes": 2785653,
+        "md5": "bfef07d53fca942d7b1bb346f3f0a626",
+        "verified": true,
+        "pages": 26,
+        "fileType": "PDF"
+      }
+    ],
+    "attachmentStatus": "verified",
+    "attachmentVerifiedDate": "2026-10-14"
+  },
+  {
+    "id": "water-05",
+    "source": "Computer Graphics Forum / Eurographics 2010",
+    "topics": [
+      "海洋光照",
+      "LOD",
+      "BRDF"
+    ],
+    "summary": "将随距离消失的几何细节转入法线与 BRDF，解决海面远景闪烁和尺度过渡。",
+    "priority": false,
+    "item": {
+      "itemType": "journalArticle",
+      "title": "Real-time Realistic Ocean Lighting using Seamless Transitions from Geometry to BRDF",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Eric",
+          "lastName": "Bruneton"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Fabrice",
+          "lastName": "Neyret"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Nicolas",
+          "lastName": "Holzschuch"
+        }
+      ],
+      "url": "https://doi.org/10.1111/j.1467-8659.2009.01618.x",
+      "abstractNote": "将随距离消失的几何细节转入法线与 BRDF，解决海面远景闪烁和尺度过渡。",
+      "language": "en",
+      "tags": [
+        {
+          "tag": "水体渲染"
+        },
+        {
+          "tag": "海洋光照"
+        },
+        {
+          "tag": "LOD"
+        },
+        {
+          "tag": "BRDF"
+        },
+        {
+          "tag": "Computer Graphics Forum"
+        }
+      ],
+      "notes": [
+        {
+          "note": "<p><b>阅读要点：</b>将随距离消失的几何细节转入法线与 BRDF，解决海面远景闪烁和尺度过渡。</p><p><b>核验来源：</b><a href=\"https://doi.org/10.1111/j.1467-8659.2009.01618.x\">Computer Graphics Forum / Eurographics 2010</a>；核验日期：2026-10-14。</p><p>Crossref 核验：29(2), 487-496。研究站点全文本次未取得；保留 DOI。</p>"
+        }
+      ],
+      "attachments": [],
+      "date": "2010",
+      "DOI": "10.1111/j.1467-8659.2009.01618.x",
+      "publicationTitle": "Computer Graphics Forum / Eurographics 2010",
+      "extra": "Crossref 核验：29(2), 487-496。研究站点全文本次未取得；保留 DOI。",
+      "id": "water-05"
+    },
+    "pdfs": [],
+    "zoteroKey": "NR3J352J",
+    "zoteroAttachments": [
+      {
+        "key": "KZYN3WWB",
+        "title": "Ocean Lighting - Eurographics 2010 paper (10 pages)",
+        "contentType": "application/pdf",
+        "linkMode": "imported_url",
+        "url": "http://www-evasion.imag.fr/Publications/2010/BNH10/article.pdf",
+        "path": "E:\\Zotero\\storage\\storage\\KZYN3WWB\\Bruneton 等 - 2010 - Real-time Realistic Ocean Lighting using Seamless Transitions from Geometry to BRDF.pdf",
+        "bytes": 17252775,
+        "md5": "d45aeca91285083d89c9f18c48daa440",
+        "verified": true,
+        "pages": 10,
+        "fileType": "PDF"
+      }
+    ],
+    "attachmentStatus": "verified",
+    "attachmentVerifiedDate": "2026-10-14"
+  },
+  {
+    "id": "water-06",
+    "source": "SIGGRAPH Asia 2012 Technical Briefs",
+    "topics": [
+      "FFT",
+      "Whitecaps",
+      "Foam"
+    ],
+    "summary": "FFT 海洋白浪与泡沫的实时生成和渲染。适合补齐海面白浪。",
+    "priority": false,
+    "item": {
+      "itemType": "conferencePaper",
+      "title": "Real-time animation and rendering of ocean whitecaps",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Jonathan",
+          "lastName": "Dupuy"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Eric",
+          "lastName": "Bruneton"
+        }
+      ],
+      "url": "https://doi.org/10.1145/2407746.2407761",
+      "abstractNote": "FFT 海洋白浪与泡沫的实时生成和渲染。适合补齐海面白浪。",
+      "language": "en",
+      "tags": [
+        {
+          "tag": "水体渲染"
+        },
+        {
+          "tag": "FFT"
+        },
+        {
+          "tag": "Whitecaps"
+        },
+        {
+          "tag": "Foam"
+        },
+        {
+          "tag": "SIGGRAPH Asia 2012 Technical Briefs"
+        }
+      ],
+      "notes": [
+        {
+          "note": "<p><b>阅读要点：</b>FFT 海洋白浪与泡沫的实时生成和渲染。适合补齐海面白浪。</p><p><b>核验来源：</b><a href=\"https://doi.org/10.1145/2407746.2407761\">SIGGRAPH Asia 2012 Technical Briefs</a>；核验日期：2026-10-14。</p><p>Crossref 核验：SIGGRAPH Asia Technical Brief，1-3 页；不是长篇 TOG 论文。作者代码：https://github.com/jdupuy/whitecaps；论文 PDF 本次未取得。</p>"
+        }
+      ],
+      "attachments": [],
+      "date": "2012",
+      "DOI": "10.1145/2407746.2407761",
+      "proceedingsTitle": "SIGGRAPH Asia 2012 Technical Briefs",
+      "extra": "Crossref 核验：SIGGRAPH Asia Technical Brief，1-3 页；不是长篇 TOG 论文。作者代码：https://github.com/jdupuy/whitecaps；论文 PDF 本次未取得。",
+      "id": "water-06"
+    },
+    "pdfs": [],
+    "zoteroKey": "WWSZSC9B",
+    "zoteroAttachments": [
+      {
+        "key": "84JDKLVD",
+        "title": "Ocean Whitecaps - SIGGRAPH Asia 2012 paper (HAL author manuscript)",
+        "contentType": "application/pdf",
+        "linkMode": "imported_url",
+        "url": "https://inria.hal.science/hal-00967078v1/file/Whitecaps.pdf?download=1",
+        "path": "E:\\Zotero\\storage\\storage\\84JDKLVD\\Dupuy和Bruneton - 2012 - Real-time animation and rendering of ocean whitecaps.pdf",
+        "bytes": 330339,
+        "md5": "7e2dc7f26b1e2fc95c5f1afeea6c7d60",
+        "verified": true,
+        "pages": 4,
+        "fileType": "PDF"
+      }
+    ],
+    "attachmentStatus": "verified",
+    "attachmentVerifiedDate": "2026-10-14"
+  },
+  {
+    "id": "water-07",
+    "source": "ACM Transactions on Graphics / SIGGRAPH 2007",
+    "topics": [
+      "交互",
+      "尾流",
+      "Wave Particles"
+    ],
+    "summary": "波粒子传播、边界反射和物体双向交互；附原作者预印本和 SIGGRAPH 实现幻灯片。",
+    "priority": true,
+    "item": {
+      "itemType": "journalArticle",
+      "title": "Wave Particles",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Cem",
+          "lastName": "Yuksel"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Donald H.",
+          "lastName": "House"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "John",
+          "lastName": "Keyser"
+        }
+      ],
+      "url": "https://www.cemyuksel.com/research/waveparticles/",
+      "abstractNote": "波粒子传播、边界反射和物体双向交互；附原作者预印本和 SIGGRAPH 实现幻灯片。",
+      "language": "en",
+      "tags": [
+        {
+          "tag": "水体渲染"
+        },
+        {
+          "tag": "交互"
+        },
+        {
+          "tag": "尾流"
+        },
+        {
+          "tag": "Wave Particles"
+        },
+        {
+          "tag": "ACM Transactions on Graphics"
+        },
+        {
+          "tag": "优先阅读"
+        }
+      ],
+      "notes": [
+        {
+          "note": "<p><b>阅读要点：</b>波粒子传播、边界反射和物体双向交互；附原作者预印本和 SIGGRAPH 实现幻灯片。</p><p><b>核验来源：</b><a href=\"https://www.cemyuksel.com/research/waveparticles/\">ACM Transactions on Graphics / SIGGRAPH 2007</a>；核验日期：2026-10-14。</p><p>作者 BibTeX 与 Crossref 核验：TOG 26(3), Article 99。</p><p><a href=\"https://www.cemyuksel.com/research/waveparticles/waveparticles.pdf\">Wave Particles - author preprint</a></p><p><a href=\"https://www.cemyuksel.com/research/waveparticles/waveparticles_sketch_slides.pdf\">Implementing Wave Particles - SIGGRAPH 2007 slides</a></p>"
+        }
+      ],
+      "attachments": [],
+      "date": "2007",
+      "DOI": "10.1145/1276377.1276501",
+      "publicationTitle": "ACM Transactions on Graphics / SIGGRAPH 2007",
+      "extra": "作者 BibTeX 与 Crossref 核验：TOG 26(3), Article 99。",
+      "id": "water-07"
+    },
+    "pdfs": [
+      [
+        "f23aca3ef85f.pdf",
+        "Wave Particles - author preprint",
+        "https://www.cemyuksel.com/research/waveparticles/waveparticles.pdf"
+      ],
+      [
+        "7b859c94c71a.pdf",
+        "Implementing Wave Particles - SIGGRAPH 2007 slides",
+        "https://www.cemyuksel.com/research/waveparticles/waveparticles_sketch_slides.pdf"
+      ]
+    ],
+    "zoteroKey": "VN8598BZ",
+    "zoteroAttachments": [
+      {
+        "key": "4FGCN9UQ",
+        "title": "Wave Particles - author preprint",
+        "contentType": "application/pdf",
+        "linkMode": "imported_url",
+        "url": "https://www.cemyuksel.com/research/waveparticles/waveparticles.pdf",
+        "path": "E:\\Zotero\\storage\\storage\\4FGCN9UQ\\Yuksel 等 - 2007 - Wave Particles.pdf",
+        "bytes": 1351629,
+        "md5": "83d40398c20d2011f1fa2d809fb3e7f1",
+        "verified": true,
+        "pages": 8,
+        "fileType": "PDF"
+      },
+      {
+        "key": "MEKF9HQH",
+        "title": "Implementing Wave Particles - SIGGRAPH 2007 slides",
+        "contentType": "application/pdf",
+        "linkMode": "imported_url",
+        "url": "https://www.cemyuksel.com/research/waveparticles/waveparticles_sketch_slides.pdf",
+        "path": "E:\\Zotero\\storage\\storage\\MEKF9HQH\\Yuksel 等 - 2007 - Wave Particles.pdf",
+        "bytes": 679546,
+        "md5": "90ca1d55f5e8d9c80e52aacf124e64f7",
+        "verified": true,
+        "pages": 59,
+        "fileType": "PDF"
+      }
+    ],
+    "attachmentStatus": "verified",
+    "attachmentVerifiedDate": "2026-10-14"
+  },
+  {
+    "id": "water-08",
+    "source": "Eurographics / ACM SIGGRAPH Symposium on Computer Animation 2010",
+    "topics": [
+      "浅水方程",
+      "粒子",
+      "交互"
+    ],
+    "summary": "浅水高度场结合粒子：大范围河流、瀑布、浪花和泡沫，兼顾水平流动与小尺度细节。",
+    "priority": false,
+    "item": {
+      "itemType": "conferencePaper",
+      "title": "Real-time Simulation of Large Bodies of Water with Small Scale Details",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Nuttapong",
+          "lastName": "Chentanez"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Matthias",
+          "lastName": "Müller"
+        }
+      ],
+      "url": "https://matthias-research.github.io/pages/publications/hfFluid.pdf",
+      "abstractNote": "浅水高度场结合粒子：大范围河流、瀑布、浪花和泡沫，兼顾水平流动与小尺度细节。",
+      "language": "en",
+      "tags": [
+        {
+          "tag": "水体渲染"
+        },
+        {
+          "tag": "浅水方程"
+        },
+        {
+          "tag": "粒子"
+        },
+        {
+          "tag": "交互"
+        },
+        {
+          "tag": "Eurographics"
+        }
+      ],
+      "notes": [
+        {
+          "note": "<p><b>阅读要点：</b>浅水高度场结合粒子：大范围河流、瀑布、浪花和泡沫，兼顾水平流动与小尺度细节。</p><p><b>核验来源：</b><a href=\"https://matthias-research.github.io/pages/publications/hfFluid.pdf\">Eurographics / ACM SIGGRAPH Symposium on Computer Animation 2010</a>；核验日期：2026-10-14。</p><p><a href=\"https://matthias-research.github.io/pages/publications/hfFluid.pdf\">SCA 2010 paper</a></p>"
+        }
+      ],
+      "attachments": [],
+      "date": "2010",
+      "proceedingsTitle": "Eurographics / ACM SIGGRAPH Symposium on Computer Animation 2010",
+      "id": "water-08"
+    },
+    "pdfs": [
+      [
+        "591d6ad6da0c.pdf",
+        "SCA 2010 paper",
+        "https://matthias-research.github.io/pages/publications/hfFluid.pdf"
+      ]
+    ],
+    "zoteroKey": "IHS9XGKF",
+    "zoteroAttachments": [
+      {
+        "key": "TUQGXRNW",
+        "title": "SCA 2010 paper",
+        "contentType": "application/pdf",
+        "linkMode": "imported_url",
+        "url": "https://matthias-research.github.io/pages/publications/hfFluid.pdf",
+        "path": "E:\\Zotero\\storage\\storage\\TUQGXRNW\\Chentanez和Müller - 2010 - Real-time Simulation of Large Bodies of Water with Small Scale Details.pdf",
+        "bytes": 7365604,
+        "md5": "e88c1c7192b6049a5faa385872625538",
+        "verified": true,
+        "pages": 11,
+        "fileType": "PDF"
+      }
+    ],
+    "attachmentStatus": "verified",
+    "attachmentVerifiedDate": "2026-10-14"
+  },
+  {
+    "id": "water-12",
+    "source": "SIGGRAPH 2010 / Valve",
+    "topics": [
+      "Flow Map",
+      "河流"
+    ],
+    "summary": "Flow Map 驱动法线 / 颜色流动，交错相位混合抑制拉伸；包括美术制作流程。",
+    "priority": true,
+    "item": {
+      "itemType": "presentation",
+      "title": "Water Flow in Portal 2",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Alex",
+          "lastName": "Vlachos"
+        }
+      ],
+      "url": "https://cdn.fastly.steamstatic.com/apps/valve/2010/siggraph2010_vlachos_waterflow.pdf",
+      "abstractNote": "Flow Map 驱动法线 / 颜色流动，交错相位混合抑制拉伸；包括美术制作流程。",
+      "language": "en",
+      "tags": [
+        {
+          "tag": "水体渲染"
+        },
+        {
+          "tag": "Flow Map"
+        },
+        {
+          "tag": "河流"
+        },
+        {
+          "tag": "SIGGRAPH 2010"
+        },
+        {
+          "tag": "优先阅读"
+        }
+      ],
+      "notes": [
+        {
+          "note": "<p><b>阅读要点：</b>Flow Map 驱动法线 / 颜色流动，交错相位混合抑制拉伸；包括美术制作流程。</p><p><b>核验来源：</b><a href=\"https://cdn.fastly.steamstatic.com/apps/valve/2010/siggraph2010_vlachos_waterflow.pdf\">SIGGRAPH 2010 / Valve</a>；核验日期：2026-10-14。</p><p>Valve 发布目录：https://www.valvesoftware.com/en/publications；PDF 标注 2010-07-28。</p><p><a href=\"https://cdn.fastly.steamstatic.com/apps/valve/2010/siggraph2010_vlachos_waterflow.pdf\">SIGGRAPH 2010 slides</a></p>"
+        }
+      ],
+      "attachments": [],
+      "date": "2010",
+      "meetingName": "SIGGRAPH 2010 / Valve",
+      "presentationType": "Technical presentation",
+      "extra": "Valve 发布目录：https://www.valvesoftware.com/en/publications；PDF 标注 2010-07-28。",
+      "id": "water-12"
+    },
+    "pdfs": [
+      [
+        "0a01c9fb58a6.pdf",
+        "SIGGRAPH 2010 slides",
+        "https://cdn.fastly.steamstatic.com/apps/valve/2010/siggraph2010_vlachos_waterflow.pdf"
+      ]
+    ],
+    "zoteroKey": "6WZFKX99",
+    "zoteroAttachments": [
+      {
+        "key": "AFXGB4V7",
+        "title": "SIGGRAPH 2010 slides",
+        "contentType": "application/pdf",
+        "linkMode": "imported_url",
+        "url": "https://cdn.fastly.steamstatic.com/apps/valve/2010/siggraph2010_vlachos_waterflow.pdf",
+        "path": "E:\\Zotero\\storage\\storage\\AFXGB4V7\\Vlachos - 2010 - Water Flow in Portal 2.pdf",
+        "bytes": 6567933,
+        "md5": "689349124194cd0efcd831e05fe98a26",
+        "verified": true,
+        "pages": 54,
+        "fileType": "PDF"
+      }
+    ],
+    "attachmentStatus": "verified",
+    "attachmentVerifiedDate": "2026-10-14"
+  },
+  {
+    "id": "water-13",
+    "source": "SIGGRAPH 2017 / Studio Gobo",
+    "topics": [
+      "Unity",
+      "LOD",
+      "交互",
+      "Foam"
+    ],
+    "summary": "Unity 海洋架构：连续 LOD、位移 RenderTexture、Gerstner、波动方程和反馈泡沫。",
+    "priority": true,
+    "item": {
+      "itemType": "presentation",
+      "title": "Crest: Novel Ocean Rendering Techniques in an Open Source Framework",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Huw",
+          "lastName": "Bowles"
+        }
+      ],
+      "url": "https://advances.realtimerendering.com/s2017/",
+      "abstractNote": "Unity 海洋架构：连续 LOD、位移 RenderTexture、Gerstner、波动方程和反馈泡沫。",
+      "language": "en",
+      "tags": [
+        {
+          "tag": "水体渲染"
+        },
+        {
+          "tag": "Unity"
+        },
+        {
+          "tag": "LOD"
+        },
+        {
+          "tag": "交互"
+        },
+        {
+          "tag": "Foam"
+        },
+        {
+          "tag": "SIGGRAPH 2017"
+        },
+        {
+          "tag": "优先阅读"
+        }
+      ],
+      "notes": [
+        {
+          "note": "<p><b>阅读要点：</b>Unity 海洋架构：连续 LOD、位移 RenderTexture、Gerstner、波动方程和反馈泡沫。</p><p><b>核验来源：</b><a href=\"https://advances.realtimerendering.com/s2017/\">SIGGRAPH 2017 / Studio Gobo</a>；核验日期：2026-10-14。</p><p>PPTX：https://advances.realtimerendering.com/s2017/Ocean_SIGGRAPH17_Final.pptx；已验证 HTTP 200，455269594 字节；保留链接，不下载大附件。代码：https://github.com/huwb/crest-oceanrender</p>"
+        }
+      ],
+      "attachments": [],
+      "date": "2017",
+      "meetingName": "SIGGRAPH 2017 / Studio Gobo",
+      "presentationType": "Technical presentation",
+      "extra": "PPTX：https://advances.realtimerendering.com/s2017/Ocean_SIGGRAPH17_Final.pptx；已验证 HTTP 200，455269594 字节；保留链接，不下载大附件。代码：https://github.com/huwb/crest-oceanrender",
+      "id": "water-13"
+    },
+    "pdfs": [],
+    "zoteroKey": "DUR6NS5Y",
+    "zoteroAttachments": [
+      {
+        "key": "3QFY2PKL",
+        "title": "Crest - SIGGRAPH 2017 official slides (PPTX)",
+        "contentType": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+        "linkMode": "imported_url",
+        "url": "https://advances.realtimerendering.com/s2017/Ocean_SIGGRAPH17_Final.pptx",
+        "path": "E:\\Zotero\\storage\\storage\\3QFY2PKL\\Bowles - 2017 - Crest Novel Ocean Rendering Techniques in an Open Source Framework.pptx",
+        "bytes": 455269594,
+        "md5": "e71aaddb546db676e69c6a1085ba2091",
+        "verified": true,
+        "slides": 103,
+        "fileType": "PPTX"
+      }
+    ],
+    "attachmentStatus": "verified",
+    "attachmentVerifiedDate": "2026-10-14"
+  },
+  {
+    "id": "water-14",
+    "source": "SIGGRAPH 2018 / Ubisoft",
+    "topics": [
+      "游戏案例",
+      "水体光照",
+      "开放世界"
+    ],
+    "summary": "水体系统及物理天空 / 昼夜光照的集成；附包含演讲备注的 195 页 PDF。演讲还包含非水体内容。",
+    "priority": true,
+    "item": {
+      "itemType": "presentation",
+      "title": "The Challenges of Rendering an Open World in Far Cry 5",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Stephen",
+          "lastName": "McAuley"
+        }
+      ],
+      "url": "https://advances.realtimerendering.com/s2018/",
+      "abstractNote": "水体系统及物理天空 / 昼夜光照的集成；附包含演讲备注的 195 页 PDF。演讲还包含非水体内容。",
+      "language": "en",
+      "tags": [
+        {
+          "tag": "水体渲染"
+        },
+        {
+          "tag": "游戏案例"
+        },
+        {
+          "tag": "水体光照"
+        },
+        {
+          "tag": "开放世界"
+        },
+        {
+          "tag": "SIGGRAPH 2018"
+        },
+        {
+          "tag": "优先阅读"
+        }
+      ],
+      "notes": [
+        {
+          "note": "<p><b>阅读要点：</b>水体系统及物理天空 / 昼夜光照的集成；附包含演讲备注的 195 页 PDF。演讲还包含非水体内容。</p><p><b>核验来源：</b><a href=\"https://advances.realtimerendering.com/s2018/\">SIGGRAPH 2018 / Ubisoft</a>；核验日期：2026-10-14。</p><p>PPTX：https://advances.realtimerendering.com/s2018/The%20Challenges%20of%20Rendering%20an%20Open%20World%20in%20Far%20Cry%205.pptx</p><p><a href=\"https://advances.realtimerendering.com/s2018/The%20Challenges%20of%20Rendering%20an%20Open%20World%20in%20Far%20Cry%205%20(With%20Notes).pdf\">SIGGRAPH 2018 slides with notes</a></p>"
+        }
+      ],
+      "attachments": [],
+      "date": "2018",
+      "meetingName": "SIGGRAPH 2018 / Ubisoft",
+      "presentationType": "Technical presentation",
+      "extra": "PPTX：https://advances.realtimerendering.com/s2018/The%20Challenges%20of%20Rendering%20an%20Open%20World%20in%20Far%20Cry%205.pptx",
+      "id": "water-14"
+    },
+    "pdfs": [
+      [
+        "0960dc4df394.pdf",
+        "SIGGRAPH 2018 slides with notes",
+        "https://advances.realtimerendering.com/s2018/The%20Challenges%20of%20Rendering%20an%20Open%20World%20in%20Far%20Cry%205%20(With%20Notes).pdf"
+      ]
+    ],
+    "zoteroKey": "VPKSF8K3",
+    "zoteroAttachments": [
+      {
+        "key": "WFWDPIKD",
+        "title": "SIGGRAPH 2018 slides with notes",
+        "contentType": "application/pdf",
+        "linkMode": "imported_url",
+        "url": "https://advances.realtimerendering.com/s2018/The%20Challenges%20of%20Rendering%20an%20Open%20World%20in%20Far%20Cry%205%20(With%20Notes).pdf",
+        "path": "E:\\Zotero\\storage\\storage\\WFWDPIKD\\McAuley - 2018 - The Challenges of Rendering an Open World in Far Cry 5.pdf",
+        "bytes": 17626565,
+        "md5": "68d1f4b75089da9855a11d96317baa31",
+        "verified": true,
+        "pages": 195,
+        "fileType": "PDF"
+      }
+    ],
+    "attachmentStatus": "verified",
+    "attachmentVerifiedDate": "2026-10-14"
+  },
+  {
+    "id": "water-15",
+    "source": "GDC 2012 / Naughty Dog",
+    "topics": [
+      "游戏案例",
+      "LOD",
+      "Flow Map"
+    ],
+    "summary": "神秘海域水体系统、网格生成、流动 Shader，以及 Uncharted 3 游轮场景的海洋 LOD 和波浪。",
+    "priority": true,
+    "item": {
+      "itemType": "presentation",
+      "title": "Water Technology of Uncharted",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Carlos",
+          "lastName": "Gonzalez-Ochoa"
+        }
+      ],
+      "url": "https://gdcvault.com/play/1015309/Water-Technology-of",
+      "abstractNote": "神秘海域水体系统、网格生成、流动 Shader，以及 Uncharted 3 游轮场景的海洋 LOD 和波浪。",
+      "language": "en",
+      "tags": [
+        {
+          "tag": "水体渲染"
+        },
+        {
+          "tag": "游戏案例"
+        },
+        {
+          "tag": "LOD"
+        },
+        {
+          "tag": "Flow Map"
+        },
+        {
+          "tag": "GDC 2012"
+        },
+        {
+          "tag": "优先阅读"
+        }
+      ],
+      "notes": [
+        {
+          "note": "<p><b>阅读要点：</b>神秘海域水体系统、网格生成、流动 Shader，以及 Uncharted 3 游轮场景的海洋 LOD 和波浪。</p><p><b>核验来源：</b><a href=\"https://gdcvault.com/play/1015309/Water-Technology-of\">GDC 2012 / Naughty Dog</a>；核验日期：2026-10-14。</p><p>已核验 GDC 官方演讲页；本次未取得独立 PDF。</p>"
+        }
+      ],
+      "attachments": [],
+      "date": "2012",
+      "meetingName": "GDC 2012 / Naughty Dog",
+      "presentationType": "Technical presentation",
+      "extra": "已核验 GDC 官方演讲页；本次未取得独立 PDF。",
+      "id": "water-15"
+    },
+    "pdfs": [],
+    "zoteroKey": "5LFX2RTM",
+    "zoteroAttachments": [
+      {
+        "key": "S9YRF6KZ",
+        "title": "Water Technology of Uncharted - GDC 2012 slides (156 pages)",
+        "contentType": "application/pdf",
+        "linkMode": "imported_url",
+        "url": "https://gdcvault.com/play/mediaProxy.php?sid=1015309",
+        "path": "E:\\Zotero\\storage\\storage\\S9YRF6KZ\\Gonzalez-Ochoa - 2012 - Water Technology of Uncharted.pdf",
+        "bytes": 40977837,
+        "md5": "30d16bc8714b741f7eb09ae1c09d76ee",
+        "verified": true,
+        "pages": 156,
+        "fileType": "PDF"
+      }
+    ],
+    "attachmentStatus": "verified",
+    "attachmentVerifiedDate": "2026-10-14"
+  },
+  {
+    "id": "water-17",
+    "source": "GDC 2023 / LIGHTSPEED STUDIOS",
+    "topics": [
+      "开放世界",
+      "浅水方程",
+      "CDLOD"
+    ],
+    "summary": "Photon Water System：统一高度 / 速度 / 泡沫数据，离线预计算与实时更新、自适应网格和 CDLOD。",
+    "priority": false,
+    "item": {
+      "itemType": "presentation",
+      "title": "Advanced Graphics Summit: Open-World Water Rendering and Real-Time Simulation",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Zhenyu",
+          "lastName": "Mao"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Kui",
+          "lastName": "Wu"
+        }
+      ],
+      "url": "https://gdcvault.com/play/1028915/Advanced-Graphics-Summit-Open-World",
+      "abstractNote": "Photon Water System：统一高度 / 速度 / 泡沫数据，离线预计算与实时更新、自适应网格和 CDLOD。",
+      "language": "en",
+      "tags": [
+        {
+          "tag": "水体渲染"
+        },
+        {
+          "tag": "开放世界"
+        },
+        {
+          "tag": "浅水方程"
+        },
+        {
+          "tag": "CDLOD"
+        },
+        {
+          "tag": "GDC 2023"
+        }
+      ],
+      "notes": [
+        {
+          "note": "<p><b>阅读要点：</b>Photon Water System：统一高度 / 速度 / 泡沫数据，离线预计算与实时更新、自适应网格和 CDLOD。</p><p><b>核验来源：</b><a href=\"https://gdcvault.com/play/1028915/Advanced-Graphics-Summit-Open-World\">GDC 2023 / LIGHTSPEED STUDIOS</a>；核验日期：2026-10-14。</p><p>已核验 GDC 官方演讲页；本次未取得独立 PDF。</p>"
+        }
+      ],
+      "attachments": [],
+      "date": "2023",
+      "meetingName": "GDC 2023 / LIGHTSPEED STUDIOS",
+      "presentationType": "Technical presentation",
+      "extra": "已核验 GDC 官方演讲页；本次未取得独立 PDF。",
+      "id": "water-17"
+    },
+    "pdfs": [],
+    "zoteroKey": "XMAIGIWZ",
+    "zoteroAttachments": [
+      {
+        "key": "8PJTHF6N",
+        "title": "Photon Water - GDC 2023 official slides (104 pages)",
+        "contentType": "application/pdf",
+        "linkMode": "imported_url",
+        "url": "https://gdcvault.com/play/mediaProxy.php?sid=1028829",
+        "path": "E:\\Zotero\\storage\\storage\\8PJTHF6N\\Mao和Wu - 2023 - Advanced Graphics Summit Open-World Water Rendering and Real-Time Simulation.pdf",
+        "bytes": 3750349,
+        "md5": "effddf8ce331ba48b827d52e49646f3f",
+        "verified": true,
+        "pages": 104,
+        "fileType": "PDF"
+      }
+    ],
+    "attachmentStatus": "verified",
+    "attachmentVerifiedDate": "2026-10-14"
+  },
+  {
+    "id": "water-19",
+    "source": "Alex Tardif technical blog",
+    "topics": [
+      "HLSL",
+      "SSR",
+      "Foam",
+      "Refraction"
+    ],
+    "summary": "完整 HLSL 水体案例：网格、Gerstner、细分、法线、高光、SSR、折射和泡沫。作者明确采用艺术化近似。",
+    "priority": true,
+    "item": {
+      "itemType": "webpage",
+      "title": "Water Walkthrough",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Alex",
+          "lastName": "Tardif"
+        }
+      ],
+      "url": "https://alextardif.com/Water.html",
+      "abstractNote": "完整 HLSL 水体案例：网格、Gerstner、细分、法线、高光、SSR、折射和泡沫。作者明确采用艺术化近似。",
+      "language": "en",
+      "tags": [
+        {
+          "tag": "水体渲染"
+        },
+        {
+          "tag": "HLSL"
+        },
+        {
+          "tag": "SSR"
+        },
+        {
+          "tag": "Foam"
+        },
+        {
+          "tag": "Refraction"
+        },
+        {
+          "tag": "Alex Tardif technical blog"
+        },
+        {
+          "tag": "优先阅读"
+        }
+      ],
+      "notes": [
+        {
+          "note": "<p><b>阅读要点：</b>完整 HLSL 水体案例：网格、Gerstner、细分、法线、高光、SSR、折射和泡沫。作者明确采用艺术化近似。</p><p><b>核验来源：</b><a href=\"https://alextardif.com/Water.html\">Alex Tardif technical blog</a>；核验日期：2026-10-14。</p><p>页面未明确标注发布日期，因此未猜年份。代码包：https://alextardif.com/downloads/Water.zip；Shader：https://alextardif.com/downloads/Water.txt</p>"
+        }
+      ],
+      "attachments": [],
+      "websiteTitle": "Alex Tardif technical blog",
+      "accessDate": "2026-10-14",
+      "extra": "页面未明确标注发布日期，因此未猜年份。代码包：https://alextardif.com/downloads/Water.zip；Shader：https://alextardif.com/downloads/Water.txt",
+      "id": "water-19"
+    },
+    "pdfs": [],
+    "zoteroKey": "PUHX5UTP",
+    "zoteroAttachments": [
+      {
+        "key": "AB8AB6NX",
+        "title": "Website snapshot - tardif (2026-10-14)",
+        "contentType": "text/html",
+        "linkMode": "imported_url",
+        "url": "https://alextardif.com/Water.html",
+        "path": "E:\\Zotero\\storage\\storage\\AB8AB6NX\\Water.html",
+        "bytes": 12664392,
+        "md5": "952e81e3ec9be948485fadc8cfa86a66",
+        "verified": true,
+        "images": 17,
+        "fileType": "网页快照"
+      }
+    ],
+    "attachmentStatus": "verified",
+    "attachmentVerifiedDate": "2026-10-14"
+  }
+]

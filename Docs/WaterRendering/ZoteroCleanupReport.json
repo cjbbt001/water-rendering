@@ -1,0 +1,336 @@
+{
+  "collection": "Shader → 水体渲染",
+  "collectionKey": "KVIXPQY7",
+  "verifiedDate": "2026-10-14",
+  "retained": 12,
+  "trashed": 12,
+  "permanentlyDeleted": 0,
+  "preservedOtherRecords": [
+    {
+      "key": "NHH825XF",
+      "title": "真实感水体渲染技术总结"
+    }
+  ],
+  "attachments": 13,
+  "pdfs": 10,
+  "presentations": 1,
+  "snapshots": 2,
+  "missingAttachments": [],
+  "items": [
+    {
+      "id": "water-01",
+      "key": "KCLR68W4",
+      "title": "Effective Water Simulation from Physical Models",
+      "attachments": [
+        {
+          "key": "X7G9I88A",
+          "title": "Website snapshot - gpu-gems (2026-10-14)",
+          "contentType": "text/html",
+          "linkMode": "imported_url",
+          "url": "https://developer.nvidia.com/gpugems/gpugems/part-i-natural-effects/chapter-1-effective-water-simulation-physical-models",
+          "path": "E:\\Zotero\\storage\\storage\\X7G9I88A\\chapter-1-effective-water-simulation-physical-models.html",
+          "bytes": 1776053,
+          "md5": "436ac23a4101a246f096d049cd8b296c",
+          "verified": true,
+          "images": 53,
+          "fileType": "网页快照"
+        }
+      ]
+    },
+    {
+      "id": "water-04",
+      "key": "J8AFJJTJ",
+      "title": "Simulating Ocean Water",
+      "attachments": [
+        {
+          "key": "N8TQFAZQ",
+          "title": "Simulating Ocean Water - author 2004 revision",
+          "contentType": "application/pdf",
+          "linkMode": "imported_url",
+          "url": "https://people.computing.clemson.edu/~jtessen/reports/papers_files/coursenotes2004.pdf",
+          "path": "E:\\Zotero\\storage\\storage\\N8TQFAZQ\\Tessendorf - 2001 - Simulating Ocean Water.pdf",
+          "bytes": 2785653,
+          "md5": "bfef07d53fca942d7b1bb346f3f0a626",
+          "verified": true,
+          "pages": 26,
+          "fileType": "PDF"
+        }
+      ]
+    },
+    {
+      "id": "water-05",
+      "key": "NR3J352J",
+      "title": "Real-time Realistic Ocean Lighting using Seamless Transitions from Geometry to BRDF",
+      "attachments": [
+        {
+          "key": "KZYN3WWB",
+          "title": "Ocean Lighting - Eurographics 2010 paper (10 pages)",
+          "contentType": "application/pdf",
+          "linkMode": "imported_url",
+          "url": "http://www-evasion.imag.fr/Publications/2010/BNH10/article.pdf",
+          "path": "E:\\Zotero\\storage\\storage\\KZYN3WWB\\Bruneton 等 - 2010 - Real-time Realistic Ocean Lighting using Seamless Transitions from Geometry to BRDF.pdf",
+          "bytes": 17252775,
+          "md5": "d45aeca91285083d89c9f18c48daa440",
+          "verified": true,
+          "pages": 10,
+          "fileType": "PDF"
+        }
+      ]
+    },
+    {
+      "id": "water-06",
+      "key": "WWSZSC9B",
+      "title": "Real-time animation and rendering of ocean whitecaps",
+      "attachments": [
+        {
+          "key": "84JDKLVD",
+          "title": "Ocean Whitecaps - SIGGRAPH Asia 2012 paper (HAL author manuscript)",
+          "contentType": "application/pdf",
+          "linkMode": "imported_url",
+          "url": "https://inria.hal.science/hal-00967078v1/file/Whitecaps.pdf?download=1",
+          "path": "E:\\Zotero\\storage\\storage\\84JDKLVD\\Dupuy和Bruneton - 2012 - Real-time animation and rendering of ocean whitecaps.pdf",
+          "bytes": 330339,
+          "md5": "7e2dc7f26b1e2fc95c5f1afeea6c7d60",
+          "verified": true,
+          "pages": 4,
+          "fileType": "PDF"
+        }
+      ]
+    },
+    {
+      "id": "water-07",
+      "key": "VN8598BZ",
+      "title": "Wave Particles",
+      "attachments": [
+        {
+          "key": "4FGCN9UQ",
+          "title": "Wave Particles - author preprint",
+          "contentType": "application/pdf",
+          "linkMode": "imported_url",
+          "url": "https://www.cemyuksel.com/research/waveparticles/waveparticles.pdf",
+          "path": "E:\\Zotero\\storage\\storage\\4FGCN9UQ\\Yuksel 等 - 2007 - Wave Particles.pdf",
+          "bytes": 1351629,
+          "md5": "83d40398c20d2011f1fa2d809fb3e7f1",
+          "verified": true,
+          "pages": 8,
+          "fileType": "PDF"
+        },
+        {
+          "key": "MEKF9HQH",
+          "title": "Implementing Wave Particles - SIGGRAPH 2007 slides",
+          "contentType": "application/pdf",
+          "linkMode": "imported_url",
+          "url": "https://www.cemyuksel.com/research/waveparticles/waveparticles_sketch_slides.pdf",
+          "path": "E:\\Zotero\\storage\\storage\\MEKF9HQH\\Yuksel 等 - 2007 - Wave Particles.pdf",
+          "bytes": 679546,
+          "md5": "90ca1d55f5e8d9c80e52aacf124e64f7",
+          "verified": true,
+          "pages": 59,
+          "fileType": "PDF"
+        }
+      ]
+    },
+    {
+      "id": "water-08",
+      "key": "IHS9XGKF",
+      "title": "Real-time Simulation of Large Bodies of Water with Small Scale Details",
+      "attachments": [
+        {
+          "key": "TUQGXRNW",
+          "title": "SCA 2010 paper",
+          "contentType": "application/pdf",
+          "linkMode": "imported_url",
+          "url": "https://matthias-research.github.io/pages/publications/hfFluid.pdf",
+          "path": "E:\\Zotero\\storage\\storage\\TUQGXRNW\\Chentanez和Müller - 2010 - Real-time Simulation of Large Bodies of Water with Small Scale Details.pdf",
+          "bytes": 7365604,
+          "md5": "e88c1c7192b6049a5faa385872625538",
+          "verified": true,
+          "pages": 11,
+          "fileType": "PDF"
+        }
+      ]
+    },
+    {
+      "id": "water-12",
+      "key": "6WZFKX99",
+      "title": "Water Flow in Portal 2",
+      "attachments": [
+        {
+          "key": "AFXGB4V7",
+          "title": "SIGGRAPH 2010 slides",
+          "contentType": "application/pdf",
+          "linkMode": "imported_url",
+          "url": "https://cdn.fastly.steamstatic.com/apps/valve/2010/siggraph2010_vlachos_waterflow.pdf",
+          "path": "E:\\Zotero\\storage\\storage\\AFXGB4V7\\Vlachos - 2010 - Water Flow in Portal 2.pdf",
+          "bytes": 6567933,
+          "md5": "689349124194cd0efcd831e05fe98a26",
+          "verified": true,
+          "pages": 54,
+          "fileType": "PDF"
+        }
+      ]
+    },
+    {
+      "id": "water-13",
+      "key": "DUR6NS5Y",
+      "title": "Crest: Novel Ocean Rendering Techniques in an Open Source Framework",
+      "attachments": [
+        {
+          "key": "3QFY2PKL",
+          "title": "Crest - SIGGRAPH 2017 official slides (PPTX)",
+          "contentType": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+          "linkMode": "imported_url",
+          "url": "https://advances.realtimerendering.com/s2017/Ocean_SIGGRAPH17_Final.pptx",
+          "path": "E:\\Zotero\\storage\\storage\\3QFY2PKL\\Bowles - 2017 - Crest Novel Ocean Rendering Techniques in an Open Source Framework.pptx",
+          "bytes": 455269594,
+          "md5": "e71aaddb546db676e69c6a1085ba2091",
+          "verified": true,
+          "slides": 103,
+          "fileType": "PPTX"
+        }
+      ]
+    },
+    {
+      "id": "water-14",
+      "key": "VPKSF8K3",
+      "title": "The Challenges of Rendering an Open World in Far Cry 5",
+      "attachments": [
+        {
+          "key": "WFWDPIKD",
+          "title": "SIGGRAPH 2018 slides with notes",
+          "contentType": "application/pdf",
+          "linkMode": "imported_url",
+          "url": "https://advances.realtimerendering.com/s2018/The%20Challenges%20of%20Rendering%20an%20Open%20World%20in%20Far%20Cry%205%20(With%20Notes).pdf",
+          "path": "E:\\Zotero\\storage\\storage\\WFWDPIKD\\McAuley - 2018 - The Challenges of Rendering an Open World in Far Cry 5.pdf",
+          "bytes": 17626565,
+          "md5": "68d1f4b75089da9855a11d96317baa31",
+          "verified": true,
+          "pages": 195,
+          "fileType": "PDF"
+        }
+      ]
+    },
+    {
+      "id": "water-15",
+      "key": "5LFX2RTM",
+      "title": "Water Technology of Uncharted",
+      "attachments": [
+        {
+          "key": "S9YRF6KZ",
+          "title": "Water Technology of Uncharted - GDC 2012 slides (156 pages)",
+          "contentType": "application/pdf",
+          "linkMode": "imported_url",
+          "url": "https://gdcvault.com/play/mediaProxy.php?sid=1015309",
+          "path": "E:\\Zotero\\storage\\storage\\S9YRF6KZ\\Gonzalez-Ochoa - 2012 - Water Technology of Uncharted.pdf",
+          "bytes": 40977837,
+          "md5": "30d16bc8714b741f7eb09ae1c09d76ee",
+          "verified": true,
+          "pages": 156,
+          "fileType": "PDF"
+        }
+      ]
+    },
+    {
+      "id": "water-17",
+      "key": "XMAIGIWZ",
+      "title": "Advanced Graphics Summit: Open-World Water Rendering and Real-Time Simulation",
+      "attachments": [
+        {
+          "key": "8PJTHF6N",
+          "title": "Photon Water - GDC 2023 official slides (104 pages)",
+          "contentType": "application/pdf",
+          "linkMode": "imported_url",
+          "url": "https://gdcvault.com/play/mediaProxy.php?sid=1028829",
+          "path": "E:\\Zotero\\storage\\storage\\8PJTHF6N\\Mao和Wu - 2023 - Advanced Graphics Summit Open-World Water Rendering and Real-Time Simulation.pdf",
+          "bytes": 3750349,
+          "md5": "effddf8ce331ba48b827d52e49646f3f",
+          "verified": true,
+          "pages": 104,
+          "fileType": "PDF"
+        }
+      ]
+    },
+    {
+      "id": "water-19",
+      "key": "PUHX5UTP",
+      "title": "Water Walkthrough",
+      "attachments": [
+        {
+          "key": "AB8AB6NX",
+          "title": "Website snapshot - tardif (2026-10-14)",
+          "contentType": "text/html",
+          "linkMode": "imported_url",
+          "url": "https://alextardif.com/Water.html",
+          "path": "E:\\Zotero\\storage\\storage\\AB8AB6NX\\Water.html",
+          "bytes": 12664392,
+          "md5": "952e81e3ec9be948485fadc8cfa86a66",
+          "verified": true,
+          "images": 17,
+          "fileType": "网页快照"
+        }
+      ]
+    }
+  ],
+  "trashedRecords": [
+    {
+      "id": "water-02",
+      "key": "JNFE6BTI",
+      "title": "Rendering Water Caustics"
+    },
+    {
+      "id": "water-03",
+      "key": "SS8S9Z8V",
+      "title": "Using Vertex Texture Displacement for Realistic Water Rendering"
+    },
+    {
+      "id": "water-09",
+      "key": "NPNA2ICW",
+      "title": "Real-Time Eulerian Water Simulation Using a Restricted Tall Cell Grid"
+    },
+    {
+      "id": "water-10",
+      "key": "M7U99UG9",
+      "title": "Real-time Breaking Waves for Shallow Water Simulations"
+    },
+    {
+      "id": "water-11",
+      "key": "QRPMEN29",
+      "title": "Real-time Simulations of Bubbles and Foam within a Shallow Water Framework"
+    },
+    {
+      "id": "water-16",
+      "key": "R5UHPHXB",
+      "title": "Advanced Graphics Techniques Tutorial: Water Rendering in 'Far Cry 5'"
+    },
+    {
+      "id": "water-18",
+      "key": "YR27QHIP",
+      "title": "Optimized pixel-projected reflections for planar reflectors"
+    },
+    {
+      "id": "water-20",
+      "key": "DWNNPRB4",
+      "title": "Waves: Moving Vertices"
+    },
+    {
+      "id": "water-21",
+      "key": "3582ICMB",
+      "title": "Looking Through Water: Underwater Fog and Refraction"
+    },
+    {
+      "id": "water-22",
+      "key": "2HDLPKJX",
+      "title": "Texture Distortion: Faking Liquid"
+    },
+    {
+      "id": "water-23",
+      "key": "PS3SRE78",
+      "title": "Generating Ray-Traced Caustic Effects in Unreal Engine 4, Part 2"
+    },
+    {
+      "id": "water-24",
+      "key": "Y4X6X5JX",
+      "title": "Ray-Traced Water Caustics with DXR"
+    }
+  ]
+}

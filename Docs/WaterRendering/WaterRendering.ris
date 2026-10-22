@@ -1,0 +1,183 @@
+TY  - CHAP
+TI  - Effective Water Simulation from Physical Models
+AU  - Finch, Mark
+PY  - 2004
+T2  - GPU Gems, Chapter 1
+UR  - https://developer.nvidia.com/gpugems/gpugems/part-i-natural-effects/chapter-1-effective-water-simulation-physical-models
+AB  - Gerstner / 正弦波叠加、解析切线与法线、几何波和动态法线贴图的分工。波浪实现的经典基础。
+KW  - 水体渲染
+KW  - Gerstner
+KW  - 解析法线
+KW  - GPU Gems, Chapter 1
+KW  - 优先阅读
+ER  - 
+
+TY  - RPRT
+TI  - Simulating Ocean Water
+AU  - Tessendorf, Jerry
+PY  - 2001
+T2  - ACM SIGGRAPH Course Notes
+UR  - https://people.computing.clemson.edu/~jtessen/reports/papers_files/coursenotes2004.pdf
+AB  - FFT 海洋的经典讲义：统计波谱、频域时间演化、位移、法线和尖锐波。
+KW  - 水体渲染
+KW  - FFT
+KW  - 频谱海洋
+KW  - ACM SIGGRAPH Course Notes
+KW  - 优先阅读
+ER  - 
+
+TY  - JOUR
+TI  - Real-time Realistic Ocean Lighting using Seamless Transitions from Geometry to BRDF
+AU  - Bruneton, Eric
+AU  - Neyret, Fabrice
+AU  - Holzschuch, Nicolas
+PY  - 2010
+T2  - Computer Graphics Forum / Eurographics 2010
+UR  - https://doi.org/10.1111/j.1467-8659.2009.01618.x
+AB  - 将随距离消失的几何细节转入法线与 BRDF，解决海面远景闪烁和尺度过渡。
+DO  - 10.1111/j.1467-8659.2009.01618.x
+KW  - 水体渲染
+KW  - 海洋光照
+KW  - LOD
+KW  - BRDF
+KW  - Computer Graphics Forum
+ER  - 
+
+TY  - CONF
+TI  - Real-time animation and rendering of ocean whitecaps
+AU  - Dupuy, Jonathan
+AU  - Bruneton, Eric
+PY  - 2012
+T2  - SIGGRAPH Asia 2012 Technical Briefs
+UR  - https://doi.org/10.1145/2407746.2407761
+AB  - FFT 海洋白浪与泡沫的实时生成和渲染。适合补齐海面白浪。
+DO  - 10.1145/2407746.2407761
+KW  - 水体渲染
+KW  - FFT
+KW  - Whitecaps
+KW  - Foam
+KW  - SIGGRAPH Asia 2012 Technical Briefs
+ER  - 
+
+TY  - JOUR
+TI  - Wave Particles
+AU  - Yuksel, Cem
+AU  - House, Donald H.
+AU  - Keyser, John
+PY  - 2007
+T2  - ACM Transactions on Graphics / SIGGRAPH 2007
+UR  - https://www.cemyuksel.com/research/waveparticles/
+AB  - 波粒子传播、边界反射和物体双向交互；附原作者预印本和 SIGGRAPH 实现幻灯片。
+DO  - 10.1145/1276377.1276501
+KW  - 水体渲染
+KW  - 交互
+KW  - 尾流
+KW  - Wave Particles
+KW  - ACM Transactions on Graphics
+KW  - 优先阅读
+ER  - 
+
+TY  - CONF
+TI  - Real-time Simulation of Large Bodies of Water with Small Scale Details
+AU  - Chentanez, Nuttapong
+AU  - Müller, Matthias
+PY  - 2010
+T2  - Eurographics / ACM SIGGRAPH Symposium on Computer Animation 2010
+UR  - https://matthias-research.github.io/pages/publications/hfFluid.pdf
+AB  - 浅水高度场结合粒子：大范围河流、瀑布、浪花和泡沫，兼顾水平流动与小尺度细节。
+KW  - 水体渲染
+KW  - 浅水方程
+KW  - 粒子
+KW  - 交互
+KW  - Eurographics
+ER  - 
+
+TY  - GEN
+TI  - Water Flow in Portal 2
+AU  - Vlachos, Alex
+PY  - 2010
+T2  - SIGGRAPH 2010 / Valve
+UR  - https://cdn.fastly.steamstatic.com/apps/valve/2010/siggraph2010_vlachos_waterflow.pdf
+AB  - Flow Map 驱动法线 / 颜色流动，交错相位混合抑制拉伸；包括美术制作流程。
+KW  - 水体渲染
+KW  - Flow Map
+KW  - 河流
+KW  - SIGGRAPH 2010
+KW  - 优先阅读
+ER  - 
+
+TY  - GEN
+TI  - Crest: Novel Ocean Rendering Techniques in an Open Source Framework
+AU  - Bowles, Huw
+PY  - 2017
+T2  - SIGGRAPH 2017 / Studio Gobo
+UR  - https://advances.realtimerendering.com/s2017/
+AB  - Unity 海洋架构：连续 LOD、位移 RenderTexture、Gerstner、波动方程和反馈泡沫。
+KW  - 水体渲染
+KW  - Unity
+KW  - LOD
+KW  - 交互
+KW  - Foam
+KW  - SIGGRAPH 2017
+KW  - 优先阅读
+ER  - 
+
+TY  - GEN
+TI  - The Challenges of Rendering an Open World in Far Cry 5
+AU  - McAuley, Stephen
+PY  - 2018
+T2  - SIGGRAPH 2018 / Ubisoft
+UR  - https://advances.realtimerendering.com/s2018/
+AB  - 水体系统及物理天空 / 昼夜光照的集成；附包含演讲备注的 195 页 PDF。演讲还包含非水体内容。
+KW  - 水体渲染
+KW  - 游戏案例
+KW  - 水体光照
+KW  - 开放世界
+KW  - SIGGRAPH 2018
+KW  - 优先阅读
+ER  - 
+
+TY  - GEN
+TI  - Water Technology of Uncharted
+AU  - Gonzalez-Ochoa, Carlos
+PY  - 2012
+T2  - GDC 2012 / Naughty Dog
+UR  - https://gdcvault.com/play/1015309/Water-Technology-of
+AB  - 神秘海域水体系统、网格生成、流动 Shader，以及 Uncharted 3 游轮场景的海洋 LOD 和波浪。
+KW  - 水体渲染
+KW  - 游戏案例
+KW  - LOD
+KW  - Flow Map
+KW  - GDC 2012
+KW  - 优先阅读
+ER  - 
+
+TY  - GEN
+TI  - Advanced Graphics Summit: Open-World Water Rendering and Real-Time Simulation
+AU  - Mao, Zhenyu
+AU  - Wu, Kui
+PY  - 2023
+T2  - GDC 2023 / LIGHTSPEED STUDIOS
+UR  - https://gdcvault.com/play/1028915/Advanced-Graphics-Summit-Open-World
+AB  - Photon Water System：统一高度 / 速度 / 泡沫数据，离线预计算与实时更新、自适应网格和 CDLOD。
+KW  - 水体渲染
+KW  - 开放世界
+KW  - 浅水方程
+KW  - CDLOD
+KW  - GDC 2023
+ER  - 
+
+TY  - ELEC
+TI  - Water Walkthrough
+AU  - Tardif, Alex
+T2  - Alex Tardif technical blog
+UR  - https://alextardif.com/Water.html
+AB  - 完整 HLSL 水体案例：网格、Gerstner、细分、法线、高光、SSR、折射和泡沫。作者明确采用艺术化近似。
+KW  - 水体渲染
+KW  - HLSL
+KW  - SSR
+KW  - Foam
+KW  - Refraction
+KW  - Alex Tardif technical blog
+KW  - 优先阅读
+ER  - 

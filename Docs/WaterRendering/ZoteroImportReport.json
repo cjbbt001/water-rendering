@@ -1,0 +1,175 @@
+{
+  "collectionKey": "KVIXPQY7",
+  "parentCollection": "S4NWCGR6",
+  "session": "codex-water-2796f6b162724b2db15cb418578a9eb0",
+  "saved": true,
+  "attachments": [
+    {
+      "id": "water-04",
+      "file": "tessendorf.pdf",
+      "status": "saved"
+    },
+    {
+      "id": "water-07",
+      "file": "f23aca3ef85f.pdf",
+      "status": "saved"
+    },
+    {
+      "id": "water-07",
+      "file": "7b859c94c71a.pdf",
+      "status": "saved"
+    },
+    {
+      "id": "water-08",
+      "file": "591d6ad6da0c.pdf",
+      "status": "saved"
+    },
+    {
+      "id": "water-09",
+      "file": "80e3e5934e7b.pdf",
+      "status": "saved"
+    },
+    {
+      "id": "water-10",
+      "file": "55f5388dba19.pdf",
+      "status": "saved"
+    },
+    {
+      "id": "water-11",
+      "file": "a9f3b8a82096.pdf",
+      "status": "saved"
+    },
+    {
+      "id": "water-12",
+      "file": "0a01c9fb58a6.pdf",
+      "status": "saved"
+    },
+    {
+      "id": "water-14",
+      "file": "0960dc4df394.pdf",
+      "status": "saved"
+    },
+    {
+      "id": "water-18",
+      "file": "f177f418d7cf.pdf",
+      "status": "saved"
+    },
+    {
+      "id": "water-20",
+      "file": "8ceece6a04c2.pdf",
+      "status": "saved"
+    },
+    {
+      "id": "water-21",
+      "file": "1ad5f95f8cd4.pdf",
+      "status": "saved"
+    },
+    {
+      "id": "water-22",
+      "file": "fbe20f3b0f5a.pdf",
+      "status": "saved"
+    }
+  ],
+  "verifiedItems": 24,
+  "verifiedAttachments": 13,
+  "items": [
+    {
+      "key": "KCLR68W4",
+      "title": "Effective Water Simulation from Physical Models"
+    },
+    {
+      "key": "JNFE6BTI",
+      "title": "Rendering Water Caustics"
+    },
+    {
+      "key": "SS8S9Z8V",
+      "title": "Using Vertex Texture Displacement for Realistic Water Rendering"
+    },
+    {
+      "key": "J8AFJJTJ",
+      "title": "Simulating Ocean Water"
+    },
+    {
+      "key": "NR3J352J",
+      "title": "Real-time Realistic Ocean Lighting using Seamless Transitions from Geometry to BRDF"
+    },
+    {
+      "key": "WWSZSC9B",
+      "title": "Real-time animation and rendering of ocean whitecaps"
+    },
+    {
+      "key": "VN8598BZ",
+      "title": "Wave Particles"
+    },
+    {
+      "key": "IHS9XGKF",
+      "title": "Real-time Simulation of Large Bodies of Water with Small Scale Details"
+    },
+    {
+      "key": "NPNA2ICW",
+      "title": "Real-Time Eulerian Water Simulation Using a Restricted Tall Cell Grid"
+    },
+    {
+      "key": "M7U99UG9",
+      "title": "Real-time Breaking Waves for Shallow Water Simulations"
+    },
+    {
+      "key": "QRPMEN29",
+      "title": "Real-time Simulations of Bubbles and Foam within a Shallow Water Framework"
+    },
+    {
+      "key": "6WZFKX99",
+      "title": "Water Flow in Portal 2"
+    },
+    {
+      "key": "DUR6NS5Y",
+      "title": "Crest: Novel Ocean Rendering Techniques in an Open Source Framework"
+    },
+    {
+      "key": "VPKSF8K3",
+      "title": "The Challenges of Rendering an Open World in Far Cry 5"
+    },
+    {
+      "key": "5LFX2RTM",
+      "title": "Water Technology of Uncharted"
+    },
+    {
+      "key": "R5UHPHXB",
+      "title": "Advanced Graphics Techniques Tutorial: Water Rendering in 'Far Cry 5'"
+    },
+    {
+      "key": "XMAIGIWZ",
+      "title": "Advanced Graphics Summit: Open-World Water Rendering and Real-Time Simulation"
+    },
+    {
+      "key": "YR27QHIP",
+      "title": "Optimized pixel-projected reflections for planar reflectors"
+    },
+    {
+      "key": "PUHX5UTP",
+      "title": "Water Walkthrough"
+    },
+    {
+      "key": "DWNNPRB4",
+      "title": "Waves: Moving Vertices"
+    },
+    {
+      "key": "3582ICMB",
+      "title": "Looking Through Water: Underwater Fog and Refraction"
+    },
+    {
+      "key": "2HDLPKJX",
+      "title": "Texture Distortion: Faking Liquid"
+    },
+    {
+      "key": "PS3SRE78",
+      "title": "Generating Ray-Traced Caustic Effects in Unreal Engine 4, Part 2"
+    },
+    {
+      "key": "Y4X6X5JX",
+      "title": "Ray-Traced Water Caustics with DXR"
+    }
+  ],
+  "verifiedPdfMd5": 13,
+  "verifiedNotes": 24
+}

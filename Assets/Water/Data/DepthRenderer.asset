@@ -55,17 +55,3 @@ MonoBehaviour:
   m_AccurateGbufferNormals: 0
   m_IntermediateTextureMode: 0
   m_TileOnlyMode: 0
---- !u!114 &8528951926688011607
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5937b43cccda2740b09a0ecfe5af668, type: 3}
-  m_Name: Encode Terrain Height
-  m_EditorClassIdentifier: Assembly-CSharp::WaterSystem.WaterTerrainDepthFeature
-  m_Active: 1
-  material: {fileID: 2100000, guid: ac0c810b3c4e30b408f23cedb145ae10, type: 2}

@@ -4,7 +4,7 @@ Unity 6000.6.2f1 / URP 17.6.0。
 
 本工程保留了 BoatAttack 的岛屿环境、船只、建筑、植被、地形、贴图、材质和 Shader Graph，以及搭建好的场景 `Scenes/water.unity`。
 
-当前**没有水系统实现**：没有水面脚本、水面 Shader/HLSL、波浪、浮力、平面反射、焦散或专用 Renderer Feature。后续水体由使用者从零编写。
+当前**没有水系统实现**：没有水面脚本、水面 Shader/HLSL、波浪、浮力、平面反射、焦散或专用 Renderer Feature。仅保留水面网格模型，后续水体由使用者从零编写。
 
 ## 目录
 
@@ -14,8 +14,10 @@ Unity 6000.6.2f1 / URP 17.6.0。
 | `Objects/` | 模型、预制体、材质、贴图、地形图层 |
 | `Objects/Shared/Shaders/` | 环境 Shader Graph 与通用 HLSL 光照函数 |
 | `Shaders/Skybox-Procedural-Universal.shader` | 程序化天空盒 Shader |
-| `Materials/ClearSky.mat`、`Sky.mat` | 天空盒材质 |
-| `Textures/` | （已清理旧水系统专用贴图） |
+| `Materials/ClearSky.mat` | 天空盒材质 |
+| `Meshes/SurfaceGrid.asset` | 100m、256×256 单元（66,049 顶点）的细分水面网格 |
+| `Meshes/OriginalWater.fbx` | BoatAttack 原始水面块/LOD/曲面细分参考模型 |
+| `Meshes/OriginalSeaVertDisp.fbx` | BoatAttack 原始 SeaVertDisp 分块参考模型 |
 
 URP 配置位于 `Assets/Settings/`，使用 `PC_RPAsset` / `PC_Renderer` 和 `Mobile_RPAsset` / `Mobile_Renderer`。
 

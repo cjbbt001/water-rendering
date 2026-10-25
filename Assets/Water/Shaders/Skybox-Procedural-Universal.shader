@@ -249,7 +249,7 @@ SubShader {
             }
 
         #if SKYBOX_SUNDISK == SKYBOX_SUNDISK_HQ
-            OUT.vertex          = -v.vertex;
+            OUT.vertex          = -v.vertex.xyz;
         #elif SKYBOX_SUNDISK == SKYBOX_SUNDISK_SIMPLE
             OUT.rayDir          = half3(-eyeRay);
         #else
@@ -284,7 +284,7 @@ SubShader {
         half getMiePhase(half eyeCos, half eyeCos2)
         {
             half temp = 1.0 + MIE_G2 - 2.0 * MIE_G * eyeCos;
-            temp = pow(temp, pow(_SunSize,0.65) * 10);
+            temp = pow(max(temp, 1.0e-4), pow(_SunSize,0.65) * 10);
             temp = max(temp,1.0e-4);
             temp = 1.5 * ((1.0 - MIE_G2) / (2.0 + MIE_G2)) * (1.0 + eyeCos2) / temp;
             #if defined(UNITY_COLORSPACE_GAMMA) && SKYBOX_COLOR_IN_TARGET_COLOR_SPACE

@@ -38,12 +38,31 @@
 
 ## 2. GPU 水面
 
-- [ ] **05** `Shaders/GerstnerWaves.hlsl`：完整公式，保留 omni、origin、静态开关、Buffer/数组两条路径和衰减参数。
-- [ ] **06** `Shaders/WaterInput.hlsl`：参数、纹理和采样器声明。
-- [ ] **07** `Shaders/CommonUtilities.hlsl`：公共计算。
-- [ ] **08** `Shaders/WaterLighting.hlsl`：光照、菲涅耳和反射采样。
-- [ ] **09** `Shaders/WaterCommon.hlsl`：位移、法线、水深、吸收散射、折射、反射、泡沫和调试输出。
-- [ ] **10** `Shaders/Water.shader`：属性、关键字、Pass 和渲染状态。
+- [x] **05** `Shaders/GerstnerWaves.hlsl`：完整公式，保留 omni、origin、静态开关、Buffer/数组两条路径和衰减参数。
+  - 完成度（2026-10-27）：单波位移、法线、多波叠加、定向/全向波、静态开关和浅水衰减已写；已修正 Wave 定义顺序，qi 分母使用 max(..., 0.01) 避免零振幅除零；数组和 Buffer 路径的临时 D3D 顶点入口均编译通过。尚未接入当前 WaterCommon.hlsl，不代表 Unity 水面效果已验证。
+  - 剩余边界：零波浪数时仍输出零法线；全向波中心仍可能 normalize(0)。分母下限会改变极小振幅时的陡峭度，属于当前稳定性处理。
+  - 接入状态：当前 Water.cs 固定上传 omni=0，未上传 origin；Update 拼作 Upate，无法逐帧刷新参数。以上为后续主控接入差距，未修改代码。
+  - 特殊处理：省略原版 `saturate(amplitude * 10000)` 位移缩放；零振幅问题应在除法前处理，事后缩放不能可靠修复 NaN。
+- [x] **06** `Shaders/WaterInput.hlsl`：参数、纹理和采样器声明。
+  - 完成度（2026-10-27）：材质常量、全局参数、反射/屏幕/水面纹理及着色中间结构已写齐；独立声明编译检查通过，尚未接入当前 WaterCommon.hlsl。
+  - 命名差异：深度相机参数使用 `_Water_DepthCamParams`，原版为 `_VeraslWater_DepthCamParams`；后续 HLSL 读取和 C# 上传需统一。
+  - 特殊处理：当前省略原版未使用的 HLSL WaterSurfaceData 中间结构，不影响现有调用。
+  - 05～06 验证：使用项目 URP 的 D3D11 API 宏，临时以 float 映射 half 精度并提供 _Time，组合 WaterInput 声明和 Gerstner 顶点调用；数组/Buffer × 动态/静态 × 无反射关键字/Cubemap/平面反射，共 12 种组合经 D3DCompile vs_5_0 编译通过。此检查覆盖声明及公式编译，不包含完整 Core.hlsl、Unity Shader 导入、纹理采样效果或移动端精度。
+- [x] **07** `Shaders/CommonUtilities.hlsl`：公共计算。
+  - 完成度（2026-10-27）：random、noise 与原版公式一致，未发现代码问题；临时顶点和片元入口调用实际函数，经 D3DCompile vs_5_0、ps_5_0 编译通过，尚未接入当前水面 Shader。
+  - 特殊处理：主动省略原包水面 Shader 未调用的 Remap、HeightToNormal，仅保留当前使用的二维梯度噪声及其伪随机辅助函数。
+- [x] **08** `Shaders/WaterLighting.hlsl`：光照、菲涅耳和反射采样。
+  - 完成度（2026-10-27）：菲涅耳、软阴影和三种反射分支已写；按使用者授权修正 SmapleReflections → SampleReflections、SAMPLER_TEXTURECUBE → SAMPLE_TEXTURECUBE，并统一 Cubemap 分支使用 reflectionVector。
+  - 验证：临时片元入口使用项目 D3D11 宏、WaterInput 声明和 half→float 映射，关闭主光源阴影后，无反射与 Cubemap 分支均通过 D3DCompile ps_5_0。尚未验证完整 URP Lighting.hlsl 集成、阴影/探针/平面反射分支及运行效果。
+  - 特殊处理：省略未调用的 VertexLightingAndFog、Highlights；保留原版软阴影和暂缓学习的其他反射分支。
+- [x] **09** `Shaders/WaterCommon.hlsl`：位移、法线、水深、吸收散射、折射、反射、泡沫和调试输出。
+  - 完成度（2026-10-28）：顶点波浪、细节法线、水深、折射、反射、散射、泡沫、高光及调试输出已写；按授权修复 Scattering 大小写与 RGB 截取，并将 AdjustedDepth/WaterDepth 返回值统一为 float/float2，修复深度调试输出维数。
+  - 特殊处理：深度图使用实际 near=0.01、far=_MaxDepth+4 解码，加入 UNITY_REVERSED_Z 分支并使用 LOD 0，恢复非零水面高度下的竖直水深；目前仍依赖原版朝下正交相机和固定 XZ 捕获范围，主控上传参数尚待接入。
+  - 特殊处理：WaterFX 位移、法线和泡沫交互暂时注释；对应调试分支输出中性值，避免引用未定义的 waterFX。水深仅保留视线厚度和竖直水深两个分量。
+  - 验证：使用完整项目 Core/Lighting HLSL 引用，经 D3DCompile 对基础、Cubemap、主光阴影、级联与附加灯、探针、平面反射、Buffer+静态、水深调试、WaterFX 调试九组的顶点/片元共 18 次编译，全部通过。临时兼容 Unity 预处理（half 映射 min16float、空 PopMarker 宏）；存在精度转换提示，不代表完整 Unity 导入与效果验证。Shader 属性/关键字及主控资源绑定仍由 10、12 项完成。
+- [x] **10** `Shaders/Water.shader`：属性、关键字、Pass 和渲染状态。
+  - 完成度（2026-10-28）：材质属性、反射/Buffer/静态/调试变体、灯光阴影、实例化、雾和顶点/片元入口已写齐；已修复标签误置，将 RenderType 设为 Transparent、Queue 设为 Transparent-100。
+  - 验证：实际项目 URP 引用下的基础、三种反射、阴影/附加灯、Buffer/静态、雾/实例化和调试共十组顶点/片元（20 次）独立 D3DCompile 编译通过。使用者刷新 Unity 后，Water.shader 已重新导入，新增 Editor.log 无 Shader 错误或警告，最新 UnityShaderCompiler 的 Cubemap 顶点/片元记录均为 ok=1；运行效果和构建变体保留情况尚未验证。
 
 ## 3. CPU 采样与主控
 

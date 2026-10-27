@@ -1,9 +1,6 @@
 #ifndef GERSTNER_WAVES_INCLUDED
 #define GERSTNER_WAVES_INCLUDED
 
-uniform uint _WaveCount;
-half4 waveData[20]; // 0-9 amplitude, direction, wavelength, omni, 10-19 origin.xy
-
 struct Wave
 {
     float amplitude;
@@ -17,9 +14,17 @@ struct WaveStruct
 {
     float3 position;
     float3 normal;
-    
 };
 
+uniform uint _WaveCount;
+
+#if defined(USE_STRUCTURED_BUFFER)
+StructuredBuffer<Wave> _WaveDataBuffer;
+#else
+half4 waveData[20]; // 0-9 amplitude, direction, wavelength, omni, 10-19 origin.xy
+#endif
+
+// 计算Gerstner波
 WaveStruct GerstnerWave(
     half2 pos, float waveCountMulti,
     half amplitude, half direction,
@@ -36,7 +41,7 @@ WaveStruct GerstnerWave(
     half k = 6.283185 / wavelength; // 波数 k = 2pi / L 
     half w = sqrt(9.8 * k); // 频率 ω = √(gk)
     half peak = 1.5;
-    half qi = peak / (amplitude * k * _WaveCount); // 陡峭度
+    half qi = peak / max(amplitude * k * _WaveCount, 0.01); // 陡峭度
     
     // direction
     direction = radians(direction);
@@ -74,24 +79,29 @@ WaveStruct GerstnerWave(
     return waveOut;
 }
 
-void SampleWaves(float3 position, out WaveStruct waveOut)
+// 采样叠加波
+void SampleWaves(float3 position, half opacity, out WaveStruct waveOut)
 {
     half2 pos = position.xz;
     waveOut.position = 0;
     waveOut.normal = 0;
 
     half waveCountMulti = 1.0 / max(_WaveCount, 1);
+    half3 opacityMask = saturate(half3(3, 3, 1) * opacity); // 浅水波浪衰减
 
     UNITY_LOOP
     for (uint i = 0; i < _WaveCount; i++)
     {
+#if defined(USE_STRUCTURED_BUFFER)
+		Wave w = _WaveDataBuffer[i];
+#else
         Wave w;
         w.amplitude = waveData[i].x;
         w.direction = waveData[i].y;
         w.wavelength = waveData[i].z;
         w.omni = waveData[i].w;
         w.origin = waveData[i + 10].xy;
-
+#endif
         WaveStruct wave = GerstnerWave(pos,
 								waveCountMulti,
 								w.amplitude,
@@ -103,8 +113,8 @@ void SampleWaves(float3 position, out WaveStruct waveOut)
         waveOut.position += wave.position;
         waveOut.normal += wave.normal;
     }
-
-    waveOut.normal = normalize(waveOut.normal);
+    waveOut.position *= opacityMask;
+    waveOut.normal *= half3(opacity, 1, opacity);
 }
 
 #endif

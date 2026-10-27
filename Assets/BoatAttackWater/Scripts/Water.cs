@@ -19,7 +19,7 @@ namespace WaterSystem
             SetWaves();
         }
 
-        private void Upate()
+        private void Update()
         {
             SetWaves();
         }

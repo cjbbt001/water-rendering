@@ -47,7 +47,8 @@ WaveStruct GerstnerWave(
     direction = radians(direction);
     half2 dirWave = half2(sin(direction), cos(direction)) * (1 - omni); 
     half2 omniWave = (pos - omniPos) * omni; //omni = 0, 定向波; omni = 1, 圆形波
-    half2 windDir = normalize(dirWave + omniWave);
+    float2 directionInput = dirWave + omniWave;
+    half2 windDir = directionInput * rsqrt(max(dot(directionInput, directionInput), 0.000001));
     half d = dot(windDir, pos - (omniPos * omni));
     
     half phase = k * d - time * w; // 相位 φ = kd - tω
@@ -85,6 +86,12 @@ void SampleWaves(float3 position, half opacity, out WaveStruct waveOut)
     half2 pos = position.xz;
     waveOut.position = 0;
     waveOut.normal = 0;
+
+    if (_WaveCount == 0)
+    {
+        waveOut.normal = float3(0, 1, 0);
+        return;
+    }
 
     half waveCountMulti = 1.0 / max(_WaveCount, 1);
     half3 opacityMask = saturate(half3(3, 3, 1) * opacity); // 浅水波浪衰减

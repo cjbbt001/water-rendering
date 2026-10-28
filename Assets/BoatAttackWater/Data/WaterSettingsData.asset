@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c43591e72eb0bda4ca9697bc53f60860, type: 3}
   m_Name: WaterSettingsData
   m_EditorClassIdentifier: Assembly-CSharp::WaterSystem.Data.WaterSettingsData
+  waterGeomType: 0
   refType: 2
   planarSettings:
-    m_ResolutionMultiplier: 2
-    m_ClipPlaneOffset: 0.07
+    m_ResolutionMultiplier: 1
+    m_ClipPlaneOffset: 0
     m_ReflectLayers:
       serializedVersion: 2
-      m_Bits: 4294967295
+      m_Bits: 39
     m_Shadows: 0
   cubemap: {fileID: 0}

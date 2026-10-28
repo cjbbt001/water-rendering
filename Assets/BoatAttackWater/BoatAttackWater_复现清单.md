@@ -29,8 +29,9 @@
   - 修改：默认资源名已修正为 `WaterResources`，泡沫字段已修正为 `defaultFoamMap`。
   - 命名差异：材质字段仍为 `dafaultWaterMaterial`，原版为 `defaultSeaMaterial`；后续自写调用保持一致即可。菜单改为 `WaterSystem/Resources` 不影响功能。
 - [x] **03** `Scripts/Rendering/PlanarReflections.cs`：反射相机、裁剪平面、反射纹理及设置类型。
+  - 最新接入（2026-10-28）：启用平面反射链路，Water.Init 自动绑定水面 target，平面偏移 -0.25 与 DrawMesh 一致；同步材质反射关键词，反射捕获期间跳过水面主动绘制，反射相机使用当前工程 Renderer 0，并在 finally 中恢复渲染状态。场景水面改用 Water 层，关闭重复 MeshRenderer，保留 DrawMesh 绘制；现有 Half 分辨率、0.07 裁剪偏移、排除 Water 的层遮罩及关闭阴影保持不变。当前 C# 编译通过，无诊断；本次实际反射画面未验证。下述暂缓说明为此前状态。
   - 完成度（2026-10-26）：已直接复制参考源码，差异仅为格式与编码；C# 编译检查通过，未验证反射效果。
-  - 特殊处理：暂缓学习和启用平面反射，后续作为独立专题；当前计划先走 Cubemap 环境反射，尚未接入。复制脚本本身不代表已启用平面反射。
+  - 特殊处理：暂缓学习和启用平面反射，后续作为独立专题；当前已接入 Cubemap 环境反射。复制脚本本身不代表已启用平面反射。
   - 01～03 编译依据：使用当前 Unity 6000.6.2f1 自带 Roslyn，复用项目 Bee 生成的 `Assembly-CSharp.rsp`（相同引用、宏和分析器），对当前全部四个 C# 源文件重新编译，输出定向到临时目录；退出码 0，无诊断输出。本检查不包含 Unity 导入、域重载和运行效果。
 - [x] **04** `Scripts/Data/WaterSettingsData.cs`：反射模式、几何模式等设置，依赖第 03 项。
   - 完成度（2026-10-27）：设置资源、反射模式枚举、几何模式枚举已写；当前 C# 源码编译检查通过，未验证 Inspector 和实际反射效果。
@@ -40,8 +41,8 @@
 
 - [x] **05** `Shaders/GerstnerWaves.hlsl`：完整公式，保留 omni、origin、静态开关、Buffer/数组两条路径和衰减参数。
   - 完成度（2026-10-27）：单波位移、法线、多波叠加、定向/全向波、静态开关和浅水衰减已写；已修正 Wave 定义顺序，qi 分母使用 max(..., 0.01) 避免零振幅除零；数组和 Buffer 路径的临时 D3D 顶点入口均编译通过。尚未接入当前 WaterCommon.hlsl，不代表 Unity 水面效果已验证。
-  - 剩余边界：零波浪数时仍输出零法线；全向波中心仍可能 normalize(0)。分母下限会改变极小振幅时的陡峭度，属于当前稳定性处理。
-  - 接入状态：当前 Water.cs 固定上传 omni=0，未上传 origin；Update 拼作 Upate，无法逐帧刷新参数。以上为后续主控接入差距，未修改代码。
+  - 边界处理（2026-10-28）：零波浪数时返回向上法线，全向波中心使用安全归一化，已消除 normalize(0)；分母下限会改变极小振幅时的陡峭度，属于当前稳定性处理。
+  - 接入状态（2026-10-28）：已接入 WaterCommon；Water.cs 上传完整 omni/origin，修正 Update 并逐帧刷新参数，默认冻结波浪时间；完整 HLSL 十组顶点/片元共 20 次编译通过，并通过临时 Unity 场景渲染验证。
   - 特殊处理：省略原版 `saturate(amplitude * 10000)` 位移缩放；零振幅问题应在除法前处理，事后缩放不能可靠修复 NaN。
 - [x] **06** `Shaders/WaterInput.hlsl`：参数、纹理和采样器声明。
   - 完成度（2026-10-27）：材质常量、全局参数、反射/屏幕/水面纹理及着色中间结构已写齐；独立声明编译检查通过，尚未接入当前 WaterCommon.hlsl。
@@ -57,7 +58,7 @@
   - 特殊处理：省略未调用的 VertexLightingAndFog、Highlights；保留原版软阴影和暂缓学习的其他反射分支。
 - [x] **09** `Shaders/WaterCommon.hlsl`：位移、法线、水深、吸收散射、折射、反射、泡沫和调试输出。
   - 完成度（2026-10-28）：顶点波浪、细节法线、水深、折射、反射、散射、泡沫、高光及调试输出已写；按授权修复 Scattering 大小写与 RGB 截取，并将 AdjustedDepth/WaterDepth 返回值统一为 float/float2，修复深度调试输出维数。
-  - 特殊处理：深度图使用实际 near=0.01、far=_MaxDepth+4 解码，加入 UNITY_REVERSED_Z 分支并使用 LOD 0，恢复非零水面高度下的竖直水深；目前仍依赖原版朝下正交相机和固定 XZ 捕获范围，主控上传参数尚待接入。
+  - 特殊处理：深度图使用实际 near=0.01、far=_MaxDepth+4 解码，加入 UNITY_REVERSED_Z 分支并使用 LOD 0，恢复非零水面高度下的竖直水深；主控参数已接入，仍使用朝下正交相机和固定 XZ 捕获范围。临时 Unity 测试中，水底 Y=0、水面 Y=10/20 时读回水深分别为 10.00001/20.00001。
   - 特殊处理：WaterFX 位移、法线和泡沫交互暂时注释；对应调试分支输出中性值，避免引用未定义的 waterFX。水深仅保留视线厚度和竖直水深两个分量。
   - 验证：使用完整项目 Core/Lighting HLSL 引用，经 D3DCompile 对基础、Cubemap、主光阴影、级联与附加灯、探针、平面反射、Buffer+静态、水深调试、WaterFX 调试九组的顶点/片元共 18 次编译，全部通过。临时兼容 Unity 预处理（half 映射 min16float、空 PopMarker 宏）；存在精度转换提示，不代表完整 Unity 导入与效果验证。Shader 属性/关键字及主控资源绑定仍由 10、12 项完成。
 - [x] **10** `Shaders/Water.shader`：属性、关键字、Pass 和渲染状态。
@@ -67,16 +68,25 @@
 ## 3. CPU 采样与主控
 
 - [ ] **11** `Scripts/GerstnerWavesJobs.cs`：采样注册、CPU 波浪计算、Jobs 调度和结果读取。
+  - 接入更新（2026-10-28）：已在 Water.Init 生成波浪后初始化 CPU 采样，LateUpdate 调度，停用/退出时释放；增加初始化状态检查和重复释放保护，浮力组件未就绪时暂停更新。当前八个 C# 源文件编译通过，仍有原有两条 autoSyncTransforms 警告；浮力公式、模式和场景配置未改，尚未验证本次运行效果。下条记录中的“CPU 调用仍注释”为本次接入前状态。
+  - 进度（2026-10-28）：已复制参考 GerstnerWavesJobs.cs，补充函数、数组、采样注册及波浪计算注释；仅修复 onmiDir→omniDir 和 Unity 6000.6 对象标识迁移（GetEntityId/EntityId，三个脚本统一注册表键与参数类型）。当前全部八个 C# 源文件使用 Unity Roslyn 与项目 Bee 响应文件编译通过，无错误；保留 BuoyantObject 中两条 Physics.autoSyncTransforms 弃用警告，未改浮力公式、Job 调度或其他运行逻辑。Water.cs 的 CPU 初始化、更新与释放仍注释，尚未验证 Unity 本次导入及浮力运行，第 11 项暂不勾选。
 - [ ] **12** `Scripts/Water.cs`：参数生成与上传、渐变纹理、水深捕获、反射初始化、相机跟随绘制、CPU 调度。
+  - 最新修改（2026-10-28）：使用者改回接近原版的 Water.cs 后，补充功能分块注释；更新无排序参数的 FindObjectsByType、无 LightProbeProxyVolume 参数的 DrawMesh、URP SingleCameraRequest 和泛型 Resources.Load。统一目标工程字段及水深参数名，提前加载资源，CPU 调用按暂缓状态保留注释；补充波浪数量边界和临时资源释放处理。
+  - 当前状态：保留原版相机跟随绘制、Buffer/数组上传和反射模式分支；自定义波浪开关位于 Water.customWaves。字段按功能归组，所有 Shader.PropertyToID 集中声明；方法内容和顺序保持一致。下述静态 GPU 版本的效果记录属于此前版本，不代表当前代码。当前全部 C# 使用 Unity 6000.6.2f1 的 Roslyn 和项目 Bee 响应文件编译通过，无错误、无警告；尚未验证本次 Unity 导入和运行效果，第 12 项仍未勾选。
+  - 完成度（2026-10-28）：静态 GPU 水面链路已打通；完成自动/自定义波浪、完整数组上传、吸收/散射/泡沫渐变、水深捕获、Cubemap 环境反射、资源清理及场景引用。整体项保留未勾选，原版相机跟随绘制、Buffer 上传及 CPU 调度尚未实现。
+  - 特殊处理：沿用现有 MeshRenderer 和网格，避免重复绘制；默认 staticWater=true 冻结波浪与 UV 时间，保留 Gerstner 波形，取消勾选可恢复运动。平面反射和 WaterFX 不启用，CPU/交互相关调用已注释。
+  - 特殊处理：水深相机位于 (0, 水面高度+4, 0)，正交半宽 250，使用 URP 17 的 SingleCameraRequest 捕获；临时隐藏水面避免自身写入水深，捕获完成立即重新绑定纹理。无指定 Cubemap 时回退到天空环境贴图。
+  - 验证：当前 C# 编译通过；隔离临时 Unity 项目使用 D3D11 实际渲染，水面可见、生成 6 条波浪、静态关键字生效、水深读回正确，禁用/重启通过，测试错误数为 0。尚未人工确认主工程岛屿场景的最终画面，也未验证打包。
 
-第 11、12 项互相引用，一起完成后检查编译。
+本轮开始第 11 项 CPU 波浪采样的源码阅读与复现，后续与第 12 项主控联合检查。
 
 - [ ] 对照 `Textures/`、`Meshes/` 配齐纹理、网格及导入设置。
-- [ ] 创建 `Materials/Sea.mat`，配置 Water Shader。
-- [ ] 创建并连接 `WaterSurfaceData.asset`、`WaterSettingsData.asset`、`WaterResources.asset`。
+- [x] 创建 `Materials/Water.mat`，配置 Water Shader。
+- [x] 创建并连接 `WaterSurfaceData.asset`、`WaterSettingsData.asset`、`WaterResources.asset`。
+  - 特殊处理（2026-10-28）：资源资产实际名为 `WaterResoureces.asset`，场景直接引用，不依赖 Resources.Load；已配置默认吸收/散射渐变及 Cubemap 模式。
 - [ ] 使用 `Resources.Load("WaterResources")` 时，将对应配置资产放在 `Resources/` 下。
 - [ ] 对照 `SeaVisual.prefab` 装配测试水面，配置相机、灯光和水下地形。
-- [ ] 启用 URP Depth Texture、Opaque Texture。
+- [x] 启用 URP Depth Texture、Opaque Texture。
 
 ## 4. Editor 工具
 
@@ -101,7 +111,9 @@
 ## 6. 浮力
 
 - [ ] **21** `Scripts/LocalToWorldJob.cs`：局部采样点转世界坐标。
+  - 进度（2026-10-28）：已复制参考脚本，注册标识类型同步为 EntityId；补充矩阵转换、共享数组、Job 调度和释放注释，C# 编译通过，尚未验证运行。
 - [ ] **22** `Scripts/BuoyantObject.cs`：体素化、浸没量、浮力、阻力和非物理跟随。
+  - 进度（2026-10-28）：已复制参考脚本，GetInstanceID 改为 GetEntityId；补充全部函数、变量、浸水近似、阿基米德浮力、阻尼和受力转矩注释。除对象标识迁移外不改运行代码；编译通过，保留两条 autoSyncTransforms 弃用警告，未接入/验证浮力效果。
 - [ ] **23** `Editor/BuoyantObjectEditor.cs`：配置与调试绘制。
 - [ ] 用立方体检查 Rigidbody、Collider、质量、体素及重心，再接船体。
 - [ ] 对照 CPU/GPU 公式差异，检查物体与水面贴合、Job 完成和 NativeArray 释放。

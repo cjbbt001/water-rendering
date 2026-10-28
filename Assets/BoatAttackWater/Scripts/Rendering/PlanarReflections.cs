@@ -64,10 +64,12 @@ namespace UnityEngine.Rendering.Universal
             {
                 _reflectionCamera.targetTexture = null;
                 SafeDestroy(_reflectionCamera.gameObject);
+                _reflectionCamera = null;
             }
             if (_reflectionTexture)
             {
                 RenderTexture.ReleaseTemporary(_reflectionTexture);
+                _reflectionTexture = null;
             }
         }
 
@@ -204,7 +206,7 @@ namespace UnityEngine.Rendering.Universal
 
             cameraData.requiresColorOption = CameraOverrideOption.Off;
             cameraData.requiresDepthOption = CameraOverrideOption.Off;
-            cameraData.SetRenderer(1);
+            cameraData.SetRenderer(0); // 当前工程的 Renderer List 只有第 0 项。
 
             var t = transform;
             var reflectionCamera = go.GetComponent<Camera>();
@@ -241,6 +243,9 @@ namespace UnityEngine.Rendering.Universal
             // we dont want to render planar reflections in reflections or previews
             if (camera == _reflectionCamera || camera.cameraType == CameraType.Reflection || camera.cameraType == CameraType.Preview)
                 return;
+            // 岸边水深相机只输出深度，不需要额外捕获反射。
+            if (camera.targetTexture != null && camera.targetTexture.format == RenderTextureFormat.Depth)
+                return;
 
             UpdateReflectionCamera(camera); // create reflected camera
             PlanarReflectionTexture(camera); // create and assign RenderTexture
@@ -250,16 +255,22 @@ namespace UnityEngine.Rendering.Universal
 
             Shader.EnableKeyword("_PLANAR_REFLECTION_CAMERA");
 
-            BeginPlanarReflections?.Invoke(context, _reflectionCamera); // callback Action for PlanarReflection
-            var request = new UniversalRenderPipeline.SingleCameraRequest
+            try
             {
-                destination = _reflectionTexture
-            };
-            RenderPipeline.SubmitRenderRequest(_reflectionCamera, request); // render planar reflections
-
-            data.Restore(); // restore the quality settings
-            Shader.SetGlobalTexture(_planarReflectionTextureId, _reflectionTexture); // Assign texture to water shader
-            Shader.DisableKeyword("_PLANAR_REFLECTION_CAMERA");
+                BeginPlanarReflections?.Invoke(context, _reflectionCamera);
+                var request = new UniversalRenderPipeline.SingleCameraRequest
+                {
+                    destination = _reflectionTexture
+                };
+                RenderPipeline.SubmitRenderRequest(_reflectionCamera, request);
+                Shader.SetGlobalTexture(_planarReflectionTextureId, _reflectionTexture);
+            }
+            finally
+            {
+                // 捕获失败时也恢复剔除方向和画质设置，避免影响主相机。
+                data.Restore();
+                Shader.DisableKeyword("_PLANAR_REFLECTION_CAMERA");
+            }
         }
 
         class PlanarReflectionSettingData

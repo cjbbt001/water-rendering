@@ -31,8 +31,11 @@
 # They also could contain extremely sensitive data
 /[Mm]emoryCaptures/
 
-# Recordings can get excessive in size
+# Recordings can get excessive in size (videos are stored via Git LFS, but intermediate frames are not)
 /[Rr]ecordings/
+!/[Rr]ecordings/
+/[Rr]ecordings/*/
+!/[Rr]ecordings/**/*.mp4
 
 # Uncomment this line if you wish to ignore the asset store tools plugin
 # /[Aa]ssets/AssetStoreTools*

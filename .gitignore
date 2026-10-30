@@ -58,6 +58,7 @@ ExportedObj/
 *.unityproj
 *.sln
 *.slnx
+!/water-rendering.slnx
 *.suo
 *.tmp
 *.user
